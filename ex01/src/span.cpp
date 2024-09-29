@@ -56,4 +56,3 @@ int Span::longestSpan(void)
     int max = std::abs(lst.back() - lst.front()); // La diferencia más grande será entre el primer y último elemento
     return max;
 }
-

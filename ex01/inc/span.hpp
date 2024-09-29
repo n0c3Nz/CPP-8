@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <ctime> // Para std::time
 
 class Span{
 	private:
@@ -18,6 +19,14 @@ class Span{
 		int addNumber(unsigned int N);
 		int shortestSpan(void);
 		int longestSpan(void);
+		template<typename Iter>
+		void addNumbers(Iter begin, Iter end)
+		{
+			for (Iter it = begin; it != end; ++it)
+			{
+				this->addNumber(*it);  // Agrega cada elemento del rango
+			}
+		}
 		class NotEnoughtSpace : public std::exception
 		{
 			public:
