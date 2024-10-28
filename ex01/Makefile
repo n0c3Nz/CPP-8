@@ -8,7 +8,7 @@ BLUE = \033[1;34m
 WHITE = \033[1;37m
 
 #COMPILATION
-NAME = mutantStack
+NAME = span
 CC = c++ -I./inc
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g3
 

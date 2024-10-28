@@ -34,7 +34,7 @@ int Span::shortestSpan(void)
 
     std::list<int>::iterator it = lst.begin();
     std::list<int>::iterator ite = --lst.end(); // Penúltimo elemento para evitar el último en la comparación
-    int min = std::numeric_limits<int>::max(); // Valor inicial muy grande
+    int min = std::abs(*ite - *it); // Inicializar con la diferencia entre el primer y último elemento
 
     for (std::list<int>::iterator next = std::next(it); next != lst.end(); ++it, ++next)
     {
